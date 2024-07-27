@@ -24,9 +24,13 @@ const CartItem = ({ item }) => {
       </td>
       <td className="item-quantity">
         <div>
-          <button onClick={handleRemoveItem}>-</button>
+          <button onClick={handleRemoveItem}>
+            <img src="/subtract-button.svg" alt="Subtract" />
+          </button>
           <span className="quantity">{item.quantity}</span>
-          <button onClick={handleAddItem}>+</button>
+          <button onClick={handleAddItem}>
+            <img src="/add-button.svg" alt="Add" />
+          </button>
         </div>
       </td>
       <td className="item-price">QAR {item.price * item.quantity}</td>
