@@ -1,0 +1,213 @@
+@import "./variable";
+
+body {
+  font-family: $font-family;
+}
+
+.cart-container {
+  padding: 60px;
+  background-color: #fff;
+  border-radius: 10px;
+  margin: 20px auto;
+  max-width: 1000px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  h4 {
+    color: var(--Primary-Pantone-513-C, #9f3090);
+    font-weight: bolder;
+    text-align: center;
+    margin-bottom: 60px;
+    font-size: 32px;
+  }
+  .cart-summary {
+    display: grid;
+    align-items: flex-start;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 80px;
+
+    .cart {
+      .cart-header-container {
+        display: flex;
+        align-items: center;
+      }
+      .cart-icon-container {
+      }
+      .cart-header {
+        color: #673f99;
+        font-weight: 600;
+        font-size: 30px;
+      }
+      table {
+        width: 100%;
+        .table-header {
+          td {
+            color: #675978;
+            border-bottom: 1px solid #000;
+            margin-bottom: 10px;
+            padding-bottom: 10px;
+          }
+        }
+        tr {
+          td {
+            padding: 8px;
+            font-size: 18px;
+          }
+        }
+      }
+      .cart-item {
+        padding: 10px;
+        border-bottom: 1px solid $gray;
+
+        .item-details {
+          display: flex;
+          align-items: flex-end;
+
+          .item-icon {
+            margin-right: 10px;
+          }
+
+          .item-name {
+            font-size: 14px;
+            color: $dark-gray;
+          }
+        }
+
+        .item-quantity {
+          // display: flex;
+          // align-items: center;
+          div {
+            display: flex;
+            align-items: center;
+          }
+          button {
+            background: none;
+            border: none;
+            font-size: 20px;
+            cursor: pointer;
+            color: $primary-color;
+          }
+
+          .quantity {
+            margin: 0 10px;
+            font-size: 14px;
+          }
+        }
+
+        .item-price {
+          font-size: 16px;
+          color: #9f3090;
+        }
+      }
+      .discount-description {
+        font-size: 14px;
+        color: #50c878;
+      }
+    }
+
+    .discount-code {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      margin-top: 20px;
+      background: #f1f7f9;
+      border: 1px solid $gray;
+      border-radius: 9999px;
+      padding: 4px 8px;
+      width: 80%;
+
+      .ticket-container {
+        display: flex;
+        align-items: center;
+      }
+      input {
+        flex: 1;
+        margin-right: 10px;
+      }
+
+      button {
+        padding: 8px 16px;
+        background-color: #fff;
+        color: #90a3bf;
+        border: none;
+        border-radius: 9999px;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.booking-summary {
+  flex: 1;
+  padding: 20px;
+  background-color: $white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  background: #e9f4ff;
+  position: relative;
+
+  .kid-image-container {
+    position: absolute;
+    width: 160px;
+    top: -20%;
+    left: -10%;
+    img {
+    }
+  }
+  .summary-header {
+    font-size: 24px;
+    color: #9f3090;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  .total-table {
+    width: 100%;
+
+    .table-key {
+      text-align: left;
+    }
+    .table-value {
+      text-align: right;
+    }
+    .summary-value {
+      font-size: 16px;
+      .table-key {
+        padding-bottom: 8px;
+      }
+      .table-value {
+        padding-bottom: 8px;
+      }
+    }
+
+    .total-value {
+      font-size: 20px;
+      font-weight: bold;
+      color: $primary-color;
+      border-top: 1px solid #000;
+
+      .table-key {
+        padding-top: 20px;
+      }
+    }
+  }
+
+  .continue-button {
+    margin-top: 20px;
+    padding: 14px 20px;
+    width: 100%;
+    background: linear-gradient(180deg, #673f99 0%, #4597c0 100%);
+    color: $white;
+    border: none;
+    border-radius: 9999px;
+    cursor: pointer;
+    font-size: 16px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    span {
+      display: inline-block;
+      width: 14px;
+      margin-left: 5px;
+    }
+  }
+}
